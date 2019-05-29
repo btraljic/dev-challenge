@@ -28,7 +28,14 @@ export default ({ navigation }) => (
     style={styles.container}
     onPress={() => navigation.navigate('MainScene')}
   >
-    <Text style={styles.header}>Best App v1.0</Text>
+    {
+      /* ***** begin */
+      /* ***** Mijenjam vX.XX kako bih bio siguran da je zadnja verzija na emulatoru */
+    }
+    <Text style={styles.header}>Best App v1.01</Text>
+    {
+      /* ***** end */
+    }
     <Text style={styles.subHeader}>Tap to start.</Text>
   </TouchableOpacity>
 );

@@ -1,6 +1,8 @@
 type Query {
   user(id: ID!): User!
-  users: [User!]
+  # users: [User!]
+  # ***** (7) Dodan je name argument za "begin with" pretraživanje po imenu
+  users(name: String): [User!]
   company(id: ID!): Company!
   companies: [Company!]
 }
