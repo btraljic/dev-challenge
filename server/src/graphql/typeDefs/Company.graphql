@@ -21,11 +21,12 @@ query Companies {
   }
 }
 """
-
 type Company {
   id: ID!
   color: Color
   image: String!
   name: String!
+  # ***** Dodan Address type
+  address: Address!
   employees: [User!]
 }

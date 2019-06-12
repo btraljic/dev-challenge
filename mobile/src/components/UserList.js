@@ -1,6 +1,19 @@
 import React, { memo } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
+
+export default memo(({ user }) => (
+  <View style={styles.userList}>
+    <View style={[styles.imageWrapper, { borderColor: user.color }]}>
+      <Image style={styles.image} source={{ uri: user.image }} />
+    </View>
+    <View style={styles.text}>
+      <Text style={styles.textName}>{user.name}</Text>
+      <Text style={styles.textEmail}>{user.email}</Text>
+    </View>
+  </View>
+));
+
 const styles = StyleSheet.create({
   userList: {
     flexDirection: 'row',
@@ -31,15 +44,3 @@ const styles = StyleSheet.create({
     fontSize: 18
   }
 });
-
-export default memo(({ user }) => (
-  <View style={styles.userList}>
-    <View style={[styles.imageWrapper, { borderColor: user.color }]}>
-      <Image style={styles.image} source={{ uri: user.image }} />
-    </View>
-    <View style={styles.text}>
-      <Text style={styles.textName}>{user.name}</Text>
-      <Text style={styles.textEmail}>{user.email}</Text>
-    </View>
-  </View>
-));
